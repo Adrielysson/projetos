@@ -56,4 +56,10 @@ public class Loja {
 		TipoDeProduto = tipoDeProduto;
 	}
 
+	@Override
+	public String toString() {
+		return "Loja [id=" + id + ", CNPJ=" + CNPJ + ", Nome=" + Nome + ", Endereço=" + Endereço + ", TipoDeProduto="
+				+ TipoDeProduto + "]";
+	}
+	
 }
