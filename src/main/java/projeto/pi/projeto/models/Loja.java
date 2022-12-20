@@ -3,9 +3,9 @@ package projeto.pi.projeto.models;
 public class Loja {
 
 	private String Nome;
-	private Long CNPJ;
+	private String CNPJ;
 	private String Endereço;
-	private String Produtos;
+	private String TipoDeProduto;
 
 	public String getNome() {
 		return Nome;
@@ -15,11 +15,11 @@ public class Loja {
 		Nome = nome;
 	}
 
-	public Long getCNPJ() {
+	public String getCNPJ() {
 		return CNPJ;
 	}
 
-	public void setCNPJ(Long cNPJ) {
+	public void setCNPJ(String cNPJ) {
 		CNPJ = cNPJ;
 	}
 
@@ -31,12 +31,12 @@ public class Loja {
 		Endereço = endereço;
 	}
 
-	public String getProdutos() {
-		return Produtos;
+	public String getTipoDeProduto() {
+		return TipoDeProduto;
 	}
 
-	public void setProdutos(String produtos) {
-		Produtos = produtos;
+	public void setTipoDeProduto(String tipoDeProduto) {
+		TipoDeProduto = tipoDeProduto;
 	}
 
 }
