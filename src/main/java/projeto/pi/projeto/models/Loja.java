@@ -61,5 +61,4 @@ public class Loja {
 		return "Loja [id=" + id + ", CNPJ=" + CNPJ + ", Nome=" + Nome + ", Endereço=" + Endereço + ", TipoDeProduto="
 				+ TipoDeProduto + "]";
 	}
-	
 }
