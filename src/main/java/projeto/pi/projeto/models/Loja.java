@@ -1,11 +1,28 @@
 package projeto.pi.projeto.models;
 
-public class Loja {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-	private String Nome;
+@Entity
+public class Loja {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String CNPJ;
+	private String Nome;
 	private String Endereço;
 	private String TipoDeProduto;
+
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return Nome;
