@@ -25,4 +25,9 @@ public class LojasController {
 		lr.save(loja);
 		return "Lojas/loja-adicionada";
 	}
+	
+	@RequestMapping("lojas/login")
+	public String login() {
+		return "Lojas/Login";
+	}
 }

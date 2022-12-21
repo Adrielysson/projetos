@@ -6,13 +6,24 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <title>Lojas</title>
+<style>
+body {
+	background-color: black;
+	color: rgb(238, 227, 227);
+	font: normal 15pt Times New Roman;
+}
+
+Form{
+text-align: center;
+}
+</style>
 </head>
 <body>
 	<div th:replace="~{menu :: menu}"></div>
 	<div class="container">
 	<h1>Adicionar Loja</h1>
 	<form action="/lojas" method="post">
-		<div>
+		<div name="Form">
 			<label>Nome da Loja</label> <input type="text" name="Nome">
 		</div>
 		

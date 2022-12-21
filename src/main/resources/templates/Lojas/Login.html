@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <title>Login</title>
+<style>
+body {
+	background-color: black;
+	color: rgb(238, 227, 227);
+	font: normal 15pt Times New Roman;
+	text-align: center;
+}
+</style>
 </head>
 <body>
-	
+<div name = 'quadrado' style="background-color: rgb(21, 32, 41); width: 700px; height: 400px; position: relative;
+    border: 3px solid rgb(255, 252, 252); margin-left: auto; margin-right: auto;">
+	<div class="container">
+		<h1>Realize seu login</h1>
+		<section>
+			<button onclick="/" class="waves-effect waves-light btn" type="submit">ENTRAR</button>
+			<button class="waves-effect waves-light btn" type="submit">CADASTRAR-SE</button>
+			<button class="waves-effect waves-light btn" type="submit">VOLTAR</button>
+		</section>
+	</div>
+	</div>
 </body>
 </html>
