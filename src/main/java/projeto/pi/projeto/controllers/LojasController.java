@@ -16,13 +16,13 @@ public class LojasController {
 	
 	@RequestMapping("lojas/form")
 	public String form() {
-		return "formLojas";
+		return "Lojas/formLojas";
 	}
 	
 	@PostMapping("/lojas")
 	public String adicionar(Loja loja) {
 		System.out.println(loja);
 		lr.save(loja);
-		return "loja-adicionada";
+		return "Lojas/loja-adicionada";
 	}
 }
