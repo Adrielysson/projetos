@@ -2,6 +2,7 @@ package projeto.pi.projeto.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,6 +12,7 @@ import projeto.pi.projeto.repositories.LojaRepository;
 import projeto.pi.projeto.repositories.UsuarioRepository;
 
 @Controller
+@RequestMapping("/lojas")
 public class LojasController {
 	
 	@Autowired
@@ -19,34 +21,34 @@ public class LojasController {
 	@Autowired
 	private LojaRepository lr;
 	
-	@RequestMapping("lojas/form")
+	@GetMapping("/form")
 	public String form() {
 		return "Lojas/formLojas";
 	}
 	
-	@PostMapping("/lojas")
+	@PostMapping
 	public String adicionar(Loja loja) {
 		System.out.println(loja);
 		lr.save(loja);
 		return "Lojas/loja-adicionada";
 	}
 	
-	@RequestMapping("lojas/login")
+	@GetMapping("/login")
 	public String login() {
 		return "Lojas/Login";
 	}
 	
-	@RequestMapping("lojas/entrar")
+	@GetMapping("/entrar")
 	public String entrar() {
 		return "Lojas/entrar";
 	}
 	
-	@RequestMapping("lojas/cadastro")
+	@GetMapping("/cadastro")
 	public String cadastro() {
 		return "Lojas/cadastro";
 	}
 	
-	@PostMapping("/lojas/usuario-cadastrado")
+	@PostMapping("/usuario-cadastrado")
 	public String usuario(Usuario usuario) {
 		System.out.println(usuario);
 		ur.save(usuario);

@@ -6,37 +6,48 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <title>Cadastro</title>
+<style>
+h1 {
+	text-align: center;
+}
+
+section {
+	text-align: center;
+}
+</style>
 </head>
 <body>
-<nav th:fragment="menucad" class="nav black">
+	<nav th:fragment="menucad" class="nav black">
 		<div class="nav-wrapper container">
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="/">Voltar</a></li>
 			</ul>
 		</div>
 	</nav>
-<div class ="container">
-	<h1>Cadastro</h1>
+	<div class="container">
+		<h1>Cadastro</h1>
 
-	<form action="/lojas/usuario-cadastrado" method="post">
-		<div name="Form">
-			<label>Nome</label> <input type="text" name="NomeUsuario">
-		</div>
+		<form action="/lojas/usuario-cadastrado" method="post">
+			<div name="Form">
+				<label>Nome</label> <input type="text" name="NomeUsuario">
+			</div>
 
-		<div>
-			<label>CPF</label> <input type="text" name="Cpf">
-		</div>
+			<div>
+				<label>CPF</label> <input type="text" name="Cpf">
+			</div>
 
-		<div>
-			<label>Email</label> <input type="text" name="Email">
-		</div>
+			<div>
+				<label>Email</label> <input type="text" name="Email">
+			</div>
 
-		<div>
-
+			<div>
+				<label>Senha</label> <input type="text" name="Senha">
+			</div>
+		</form>
+		<section>
 			<button class="waves-effect waves-light btn" type="submit">Salvar</button>
 			<button class="waves-effect waves-light btn" type="reset">Limpar</button>
-		</div>
-	</form>
+		</section>
 	</div>
 </body>
 </html>
